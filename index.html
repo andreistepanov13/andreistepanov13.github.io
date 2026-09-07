@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fafafa">
+<meta name="description" content="Андрей Степанов — заместитель директора подразделения, Газпромбанк Автолизинг. Лизинг автомобилей и спецтехники для бизнеса по всей России.">
+<title>Андрей Степанов — Газпромбанк Автолизинг</title>
+<style>
+:root{
+  --bg:#FAFAFA; --text:#1D1D1F; --muted:#6E6E73; --card:#fff;
+  --line:rgba(0,0,0,.08); --accent:#0071E3; --dark:#1D1D1F;
+  --max:640px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(var(--max),100%);margin:auto;padding:0 22px}
+
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:20;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 22px;backdrop-filter:saturate(180%) blur(20px);
+  background:rgba(250,250,250,.75);border-bottom:1px solid var(--line)
+}
+.brand{font-weight:650;font-size:15px;letter-spacing:-.01em}
+.nav-cta{padding:9px 16px;border-radius:999px;background:var(--accent);color:#fff;font-size:13px;font-weight:600}
+
+/* ---- Card (everything visible up top) ---- */
+.card{padding:96px 0 40px;display:flex;flex-direction:column;align-items:center;text-align:center}
+
+.avatar{
+  position:relative;width:min(260px,62vw);height:min(260px,62vw);border-radius:50%;overflow:hidden;
+  background:linear-gradient(145deg,#c7c7cc,#9a9aa0);box-shadow:0 14px 34px rgba(0,0,0,.14);
+  margin-bottom:20px
+}
+.avatar img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block}
+.avatar-fallback{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:78px;font-weight:650}
+
+h1{font-size:28px;line-height:1.15;letter-spacing:-.01em;margin:0 0 6px;font-weight:650}
+.role{font-size:15px;color:var(--muted);margin-bottom:2px}
+.loc{font-size:14px;color:var(--muted);margin-bottom:22px}
+
+.company{
+  display:inline-flex;align-items:center;gap:9px;padding:8px 14px 8px 8px;
+  border-radius:999px;background:var(--card);border:1px solid var(--line);
+  margin-bottom:26px
+}
+.logo-mark{width:26px;height:26px;flex:none;border-radius:7px;overflow:hidden}
+.logo-mark img{width:100%;height:100%;object-fit:cover;display:block}
+.company span{font-size:13px;font-weight:600;color:var(--text)}
+
+.phone{font-size:clamp(26px,7vw,32px);letter-spacing:-.02em;font-weight:650;margin-bottom:18px}
+
+.actions{display:flex;gap:10px;width:100%;max-width:380px;margin-bottom:30px}
+.btn{flex:1;display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 16px;border-radius:16px;font-weight:600;font-size:15px;border:1px solid transparent;transition:transform .2s ease,background .2s ease}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-secondary{background:var(--card);color:var(--text);border-color:var(--line)}
+
+.section-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+
+/* ---- Messenger grid ---- */
+.msg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:420px}
+.msg{display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 6px;border-radius:20px;background:var(--card);border:1px solid var(--line);transition:transform .2s ease,box-shadow .2s ease}
+.msg:active{transform:scale(.96)}
+.msg-icon{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center}
+.msg-icon svg{width:24px;height:24px}
+.msg span{font-size:12.5px;font-weight:600;color:var(--text)}
+.msg-telegram .msg-icon{background:#29A9EA}
+.msg-max .msg-icon{background:#6C5CE7}
+.msg-whatsapp .msg-icon{background:#25D366}
+.msg-vk .msg-icon{background:#0077FF}
+.msg-instagram .msg-icon{background:radial-gradient(circle at 30% 110%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.msg-email .msg-icon{background:#8E8E93}
+
+/* ---- Lower sections ---- */
+.section{padding:70px 0}
+.divider{height:1px;background:var(--line);width:100%}
+.big-statement{font-size:clamp(30px,6vw,46px);line-height:1.12;letter-spacing:-.02em;margin:0;text-align:center}
+.big-statement .muted{color:#b0b0b5}
+.about{text-align:center}
+.about-copy{font-size:19px;line-height:1.45;max-width:520px;margin:0 auto 18px}
+.about-side{color:var(--muted);font-size:15px;line-height:1.6;max-width:480px;margin:0 auto}
+
+.footer{padding:30px 22px 46px;text-align:center;color:var(--muted);font-size:13px}
+.instagram-note{max-width:420px;margin:14px auto 0;color:#a3a3a8;font-size:11px;line-height:1.5}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.reveal{transition:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="brand">Андрей Степанов</div>
+  <a class="nav-cta" href="#contact">Контакты</a>
+</nav>
+
+<main>
+
+<section class="card" id="contact">
+  <div class="wrap" style="display:flex;flex-direction:column;align-items:center">
+
+    <div class="avatar" id="heroPhoto">
+      <!-- Замените profile.jpg на вашу подготовленную фотографию (квадратный кадр, лицо по центру). -->
+      <div class="avatar-fallback">АС</div>
+      <img src="profile.jpg" alt="Андрей Степанов" onerror="this.style.display='none'">
+    </div>
+
+    <h1>Андрей Степанов</h1>
+    <div class="role">Заместитель директора подразделения</div>
+    <div class="loc">Санкт-Петербург · работаю по всей России</div>
+
+    <a class="company" href="#about">
+      <span class="logo-mark"><img src="gazprombank-logo.jpg" alt="Газпромбанк Автолизинг"></span>
+      <span>Газпромбанк Автолизинг</span>
+    </a>
+
+    <a class="phone" href="tel:+79229991123">+7 922 999-11-23</a>
+
+    <a class="btn btn-primary" style="width:100%;max-width:380px;margin-bottom:10px" href="https://t.me/andrei_stef?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82%20%D0%BF%D0%BE%20%D0%BB%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3%D1%83" target="_blank" rel="noopener">Получить расчёт лизинга →</a>
+
+    <div class="actions">
+      <a class="btn btn-secondary" href="tel:+79229991123">Позвонить</a>
+      <button class="btn btn-secondary" id="saveContact" type="button">В контакты</button>
+    </div>
+
+    <div class="section-label">Написать в мессенджер</div>
+    <div class="msg-grid">
+      <a class="msg msg-telegram" href="https://t.me/andrei_stef" target="_blank" rel="noopener">
+        <span class="msg-icon">
+          <svg viewBox="0 0 24 24"><path fill="#fff" d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+        </span>
+        <span>Telegram</span>
+      </a>
+      <a class="msg msg-max" href="https://max.ru/:share?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82%20%D0%BF%D0%BE%20%D0%BB%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3%D1%83" target="_blank" rel="noopener">
+        <span class="msg-icon">
+          <svg viewBox="0 0 24 24"><path fill="#fff" d="M4.5 4.5h15a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2H10l-3.9 3.2c-.5.4-1.3.06-1.3-.58v-2.62H4.5a2 2 0 0 1-2-2v-8.5a2 2 0 0 1 2-2z"/></svg>
+        </span>
+        <span>MAX</span>
+      </a>
+      <a class="msg msg-whatsapp" href="https://wa.me/79229991123" target="_blank" rel="noopener">
+        <span class="msg-icon">
+          <svg viewBox="0 0 24 24"><path fill="#fff" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5l-1.4 5.12 5.24-1.37a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67a8.2 8.2 0 0 1 5.83 2.42 8.19 8.19 0 0 1 2.42 5.82c0 4.55-3.7 8.24-8.26 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.81.83-3.03-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.24-8.25m-4.38 4.75c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.7 2.72 4.2 3.7 2.08.83 2.5.66 2.95.62.45-.04 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.45-.28-.24-.12-1.45-.71-1.67-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.35-.76-1.85-.2-.48-.4-.42-.55-.42h-.47z"/></svg>
+        </span>
+        <span>WhatsApp</span>
+      </a>
+      <a class="msg msg-vk" href="https://vk.ru/andrusha_stef" target="_blank" rel="noopener">
+        <span class="msg-icon">
+          <svg viewBox="0 0 24 24"><text x="12" y="15.5" text-anchor="middle" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="10" font-weight="800" letter-spacing="-0.5" fill="#fff">VK</text></svg>
+        </span>
+        <span>VK</span>
+      </a>
+      <a class="msg msg-instagram" href="https://instagram.com/andrusha_stef" target="_blank" rel="noopener">
+        <span class="msg-icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.6" stroke="#fff" stroke-width="1.8"/><circle cx="16.2" cy="7.8" r="1" fill="#fff"/></svg>
+        </span>
+        <span>Instagram</span>
+      </a>
+      <a class="msg msg-email" href="mailto:Askingpw@yandex.ru">
+        <span class="msg-icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5" stroke="#fff" stroke-width="1.6"/><path d="M4.5 7l7.5 5.5L19.5 7" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span>Почта</span>
+      </a>
+    </div>
+
+    <div class="instagram-note">Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой на территории РФ.</div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<section class="section" id="about">
+  <div class="wrap reveal">
+    <p class="big-statement">Ваш бизнес. <span class="muted">Ваша техника.</span><br>Оптимальные условия лизинга.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap about reveal">
+    <div class="section-label">Обо мне</div>
+    <div class="about-copy">Более 5 лет в корпоративном лизинге. Помогаю предпринимателям подобрать лизинговое решение под задачи бизнеса.</div>
+    <div class="about-side">Работаю с юридическими лицами и ИП по всей России. Автомобили и спецтехника — одинаково внимательно к каждой задаче.</div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;text-align:center">
+  <div class="wrap reveal">
+    <div class="section-label">Рассчитаем ваш проект</div>
+    <p class="big-statement" style="margin-bottom:32px">Нужен расчёт?<br>Давайте обсудим.</p>
+    <a class="btn btn-primary" style="display:inline-flex;padding:0 26px" href="https://t.me/andrei_stef?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82%20%D0%BF%D0%BE%20%D0%BB%D0%B8%D0%B7%D0%B8%D0%BD%D0%B3%D1%83" target="_blank" rel="noopener">Получить расчёт лизинга →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">Андрей Степанов · Санкт-Петербург · Работаю по всей России</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+document.getElementById('saveContact').addEventListener('click',()=>{
+  const vcard=[
+    'BEGIN:VCARD','VERSION:3.0',
+    'N:Степанов;Андрей;;;',
+    'FN:Андрей Степанов',
+    'ORG:Газпромбанк Автолизинг',
+    'TITLE:Заместитель директора подразделения',
+    'TEL;TYPE=CELL:+79229991123',
+    'EMAIL;TYPE=INTERNET:Askingpw@yandex.ru',
+    'URL:https://andreistepanov.pages.dev',
+    'ADR;TYPE=WORK:;;Санкт-Петербург;;;;',
+    'NOTE:Лизинг автомобилей и спецтехники для бизнеса по всей России',
+    'END:VCARD'
+  ].join('\r\n');
+  const blob=new Blob([vcard],{type:'text/vcard;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download='Andrey_Stepanov.vcf'; a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+</script>
+</body>
+</html>
